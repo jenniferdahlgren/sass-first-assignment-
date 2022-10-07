@@ -1,0 +1,263 @@
+* { 
+
+  box-sizing: border-box;  
+  margin: 0; 
+  
+  } 
+
+  .img-bg { 
+  
+  background-image: url(../Img/negative-space-black-forest-dawn.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-attachment: fixed; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100vh; 
+  } 
+  
+  // Navbar section 
+  
+  .top-nav { 
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between;  
+  color: #FFF; 
+  height: 50px; 
+  padding: 1em; 
+  } 
+  
+  a { 
+  color: white; 
+  text-decoration: none; 
+  } 
+  
+  a:hover { 
+  text-decoration: underline; 
+  color: white; 
+  
+  } 
+  
+  .menu { 
+  display: flex; 
+  flex-direction: row; 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  
+  } 
+  
+  .menu > li { 
+  margin: 0 1rem; 
+  overflow: hidden; 
+  font-family: 'Times New Roman', Times, serif; 
+  } 
+  
+  .menu-button-container { 
+  display: none; 
+  height: 100%; 
+  width: 30px; 
+
+  cursor: pointer; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  } 
+  
+  #menu-toggle { 
+  display: none; 
+  
+  } 
+  
+  .menu-button, .menu-button::before, .menu-button::after { 
+  display: block; 
+  background-color: #fff; 
+  position: absolute; 
+  height: 4px; 
+  width: 30px; 
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1); 
+  border-radius: 2px; 
+  
+  } 
+  .menu-button::before { 
+  content: ''; 
+  margin-top: -8px; 
+  } 
+  
+  .menu-button::after { 
+  content: ''; 
+  margin-top: 8px; 
+  } 
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before { 
+  margin-top: 0px; 
+  transform: rotate(405deg); 
+  } 
+  
+  #menu-toggle:checked + .menu-button-container .menu-button { 
+  background: rgba(255, 255, 255, 0); 
+  } 
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after { 
+  margin-top: 0px; 
+  transform: rotate(-405deg); 
+  } 
+  
+  @media (max-width: 768px) { 
+  .menu-button-container { 
+  display: flex; 
+  } 
+
+  .menu { 
+  position: absolute; 
+  top: 0; 
+  margin-top: 50px; 
+  left: 0; 
+  flex-direction: column; 
+  width: 100%; 
+  justify-content: center; 
+  align-items: center; 
+  font-family: 'Times New Roman', Times, serif; 
+  } 
+  
+  #menu-toggle ~ .menu li { 
+  height: 0; 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); 
+  } 
+  
+  #menu-toggle:checked ~ .menu li { 
+  height: 2.5em; 
+  padding: 0.5em; 
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); 
+  } 
+  
+  .menu > li { 
+  display: flex; 
+  justify-content: center; 
+  margin: 0; 
+  padding: 0.5em 0; 
+  width: 100%; 
+  color: white; 
+  } 
+  
+  } 
+
+  h1 { 
+  color: white; 
+  font-family: 'Times New Roman', Times, serif; 
+  text-align: center; 
+  margin-top: 150px; 
+  font-weight: bold; 
+  } 
+
+  p { 
+  color: white; 
+  font-family: 'Times New Roman', Times, serif; 
+  text-align: center; 
+  margin-top: 50px; 
+  font-size: 16pt; 
+  } 
+
+  .container_about { 
+  flex-direction: column; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-attachment: fixed; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100vh; 
+  } 
+  
+  .about { 
+  font-family: 'Times New Roman', Times, serif; 
+  color: black; 
+  background-color: rgb(245, 247, 253); 
+  text-align: center; 
+  font-size: 18pt; 
+  } 
+
+  .team {  
+  color: black; 
+  margin-top: 40px; 
+  font-family: 'Times New Roman', Times, serif; 
+  text-align: center; 
+  font-size: 18pt; 
+  } 
+  
+  h4 { 
+  text-align: center; 
+  display: flex; 
+  margin-left: 170px; 
+  margin-top: 50px; 
+  
+  } 
+  
+  .img-profile { // detta justerar storleken på bild 
+  border-radius: 100%; 
+  margin-left: 70px; 
+  margin-bottom: 30px; 
+  margin-top: 30px; 
+  width: 100%; 
+  max-width: 300px; 
+  height: auto; 
+  box-shadow: 0 0 20px gray; 
+  } 
+  
+
+  .about-info { 
+  background: rgba(220, 219, 219, 0.932); 
+  border-radius: 3%; 
+  background-clip: padding-box; 
+  display: flex; 
+  height:100px; 
+  width:400px; 
+  margin-left: 30px; 
+  padding: 40px; 
+  font-size: 12pt; 
+  } 
+ 
+  .column { 
+  float: left; 
+  width: 50%; 
+  padding: 5px; 
+  } 
+
+  /* Clearfix (clear floats) */ 
+  
+  .row::after { 
+  content: ""; 
+  clear: both; 
+  display: table; 
+  } 
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */ 
+  
+  @media screen and (max-width: 768px) { 
+  .column { 
+  width: 100%; 
+  display: grid; 
+  place-items: center; 
+  flex-direction: column; 
+  } 
+  
+  .container-footer { 
+  flex-direction: column; 
+
+  } 
+  
+  .grid-container { 
+  display: grid; 
+  grid-template-columns: auto auto auto auto auto auto; 
+  grid-template: 
+  'start start start start start start' 
+  'team team team team team team' 
+  'footer footer footer footer footer footer'; 
+  } 
+  
+  } 
